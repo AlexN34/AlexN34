@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Alex's Home page</title><link href="https://AlexN34.github.io/" rel="alternate"></link><link href="https://AlexN34.github.io/feeds/all.atom.xml" rel="self"></link><id>https://AlexN34.github.io/</id><updated>2018-03-20T22:22:00+11:00</updated><entry><title>Docker Cheatsheet</title><link href="https://AlexN34.github.io/blog/2018/docker-cheatsheet" rel="alternate"></link><published>2018-03-20T22:22:00+11:00</published><updated>2018-03-20T22:22:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-03-20:/blog/2018/docker-cheatsheet</id><summary type="html">&lt;p&gt;Recently completed a Lynda course on using Docker - saved some commands for future reference.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Docker Notes&lt;/h1&gt;
+=======
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alex's Home page</title><link href="https://AlexN34.github.io/" rel="alternate"></link><link href="https://AlexN34.github.io/feeds/all.atom.xml" rel="self"></link><id>https://AlexN34.github.io/</id><updated>2018-03-20T21:54:00+11:00</updated><entry><title>Docker Cheatsheet</title><link href="https://AlexN34.github.io/blog/2018/docker-cheatsheet.html" rel="alternate"></link><published>2018-03-20T21:54:00+11:00</published><updated>2018-03-20T21:54:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-03-20:/blog/2018/docker-cheatsheet.html</id><summary type="html">&lt;p&gt;Recently completed a Lynda course on using Docker - saved some commands for future reference.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Docker Notes&lt;/h1&gt;
+>>>>>>> 522381b83f010a66094844da1fa533d62558a5f5
 &lt;p&gt;I took some notes whilst going through Lynda's Learning Docker course (which was surprisingly practical given 3 hours of runtime). Posting this to jog future me's brain when I inevitably forget and need to use some of these commands.&lt;/p&gt;
 &lt;h1&gt;Docker lifecycle management&lt;/h1&gt;
 &lt;ul&gt;
@@ -76,6 +80,12 @@
 &lt;li&gt;Docker caches per line -- put lines that change often towards the bottom so unchanged stuff is processed faster&lt;/li&gt;
 &lt;li&gt;Processes started on one line will not be running on next line &lt;/li&gt;
 &lt;li&gt;Environment variables set can persist&lt;/li&gt;
+<<<<<<< HEAD
 &lt;/ul&gt;</content><category term="docker"></category><category term="cheatsheets"></category></entry><entry><title>New Year's Post</title><link href="https://AlexN34.github.io/blog/2018/new-years-post" rel="alternate"></link><published>2018-01-01T22:22:00+11:00</published><updated>2018-01-01T22:22:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-01-01:/blog/2018/new-years-post</id><summary type="html">&lt;p&gt;Going to start posting stuff here! Theme fixed.&lt;/p&gt;</summary><content type="html">&lt;p&gt;New Year's Post&lt;/p&gt;
 &lt;h6&gt;&lt;/h6&gt;
 &lt;p&gt;Going to start posting stuff here! Theme fixed.&lt;/p&gt;</content></entry></feed>
+=======
+&lt;/ul&gt;</content><category term="cheatsheets"></category><category term="docker"></category></entry><entry><title>New Year's Post</title><link href="https://AlexN34.github.io/blog/2018/new-year's-post.html" rel="alternate"></link><published>2018-01-01T22:22:00+11:00</published><updated>2018-01-01T22:22:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-01-01:/blog/2018/new-year's-post.html</id><summary type="html">&lt;p&gt;Going to start posting stuff here! Theme fixed.&lt;/p&gt;</summary><content type="html">&lt;p&gt;New Year's Post&lt;/p&gt;
+&lt;h6&gt;&lt;/h6&gt;
+&lt;p&gt;Going to start posting stuff here! Theme fixed.&lt;/p&gt;</content><category term="other"></category></entry></feed>
+>>>>>>> 522381b83f010a66094844da1fa533d62558a5f5
