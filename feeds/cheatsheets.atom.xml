@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alex's Home page - cheatsheets</title><link href="https://AlexN34.github.io/" rel="alternate"></link><link href="https://AlexN34.github.io/feeds/cheatsheets.atom.xml" rel="self"></link><id>https://AlexN34.github.io/</id><updated>2018-03-20T22:22:00+11:00</updated><entry><title>Docker Cheatsheet</title><link href="https://AlexN34.github.io/blog/2018/docker-cheatsheet" rel="alternate"></link><published>2018-03-20T22:22:00+11:00</published><updated>2018-03-20T22:22:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-03-20:/blog/2018/docker-cheatsheet</id><summary type="html">&lt;p&gt;Recently completed a Lynda course on using Docker - saved some commands for future reference.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Docker Notes&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alex's Home page - cheatsheets</title><link href="https://AlexN34.github.io/" rel="alternate"></link><link href="https://AlexN34.github.io/feeds/cheatsheets.atom.xml" rel="self"></link><id>https://AlexN34.github.io/</id><updated>2018-03-23T17:19:00+11:00</updated><entry><title>Docker Cheatsheet</title><link href="https://AlexN34.github.io/blog/2018/docker-cheatsheet" rel="alternate"></link><published>2018-03-23T17:19:00+11:00</published><updated>2018-03-23T17:19:00+11:00</updated><author><name>Alex Nguyen</name></author><id>tag:alexn34.github.io,2018-03-23:/blog/2018/docker-cheatsheet</id><summary type="html">&lt;p&gt;Recently completed a Lynda course on using Docker - saved some commands for future reference.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Docker Notes&lt;/h1&gt;
 &lt;p&gt;I took some notes whilst going through Lynda's Learning Docker course (which was surprisingly practical given 3 hours of runtime). Posting this to jog future me's brain when I inevitably forget and need to use some of these commands.&lt;/p&gt;
 &lt;h1&gt;Docker lifecycle management&lt;/h1&gt;
 &lt;ul&gt;
@@ -76,4 +76,7 @@
 &lt;li&gt;Docker caches per line -- put lines that change often towards the bottom so unchanged stuff is processed faster&lt;/li&gt;
 &lt;li&gt;Processes started on one line will not be running on next line &lt;/li&gt;
 &lt;li&gt;Environment variables set can persist&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker"></category><category term="cheatsheets"></category></entry></feed>
+&lt;/ul&gt;
+&lt;h1&gt;Triage&lt;/h1&gt;
+&lt;p&gt;Commands for when things go wrong
+- run command on container of choice with &lt;code&gt;docker exec -u 0 -it container-name bash&lt;/code&gt;&lt;/p&gt;</content><category term="docker"></category><category term="cheatsheets"></category></entry></feed>
