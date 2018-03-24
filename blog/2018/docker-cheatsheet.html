@@ -97,7 +97,7 @@
 
   <div>
     <h1>Docker Notes</h1>
-<p>I took some notes whilst going through Lynda's Learning Docker course (which was surprisingly practical given 3 hours of runtime). Posting this to jog future me's brain when I inevitably forget and need to use some of these commands.</p>
+<p>Late last year, I took some notes whilst going through Lynda's Learning Docker course and have built up my own documented summarised as they have become useful to me. Posting this to remind future me (and anyone else reading) when syntax is inevitably forgotten.</p>
 <h1>Docker lifecycle management</h1>
 <ul>
 <li><code>docker run ...</code> -&gt; <code>docker stop</code> (or exit process) -&gt; <code>docker commit ...</code></li>
@@ -160,9 +160,14 @@
 <li>Spin up container and allocate (ephemeral) volume storage: <code>docker run -ti -v /shared-folder ubuntu bash</code></li>
 <li>Access/run in container with <code>docker run -ti --volumes-from frosty_shaw ubuntu bash</code></li>
 </ul>
-<h1>Accessing Registries</h1>
+<h1>Interacting with Registries</h1>
 <ul>
 <li><code>docker search ubuntu</code></li>
+</ul>
+<h2>Pushing local image to cloud repo</h2>
+<ul>
+<li><code>docker tag &lt;local name:[tag]&gt; &lt;url/path/to/repo:[tag]&gt;</code> first to make image you're pushing exist first</li>
+<li><code>docker push &lt;url/path/to/repo:[tag]</code> to push local instance to current repository </li>
 </ul>
 <h1>Dockerfiles (creation, etc)</h1>
 <div class="highlight"><pre><span class="code-line"><span></span>docker build -t name-of-result .</span>

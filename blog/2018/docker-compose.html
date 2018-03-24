@@ -22,18 +22,26 @@
 
 
 
-    <meta name="author" content="Alex Nguyen" />
-    <meta name="description" content="" />
+<meta name="author" content="Alex Nguyen" />
+<meta name="description" content="Continuing experimentation with Docker using Docker-compose" />
+<meta name="keywords" content="docker, compose, cheatsheets">
+
 <meta property="og:site_name" content="Alex's Home page"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Alex's Home page"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="Docker Compose"/>
+<meta property="og:description" content="Continuing experimentation with Docker using Docker-compose"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://AlexN34.github.io"/>
+<meta property="og:url" content="https://AlexN34.github.io/blog/2018/docker-compose"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-03-23 17:19:00+11:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://AlexN34.github.io/author/alex-nguyen.html">
+<meta property="article:section" content="cheatsheets"/>
+<meta property="article:tag" content="docker"/>
+<meta property="article:tag" content="compose"/>
+<meta property="article:tag" content="cheatsheets"/>
 <meta property="og:image" content="/images/profile.jpg">
 
-  <title>Alex's Home page &ndash;     Tag docker
-</title>
+  <title>Alex's Home page &ndash; Docker Compose</title>
 
 </head>
 <body>
@@ -76,53 +84,43 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://AlexN34.github.io/blog/2018/docker-cheatsheet#docker-cheatsheet">Docker Cheatsheet</a></h2>
+      
+    <h1 id="docker-compose">Docker Compose</h1>
     <p>
           Posted on Fri 23 March 2018 in <a href="https://AlexN34.github.io/category/cheatsheets">cheatsheets</a>
 
 
-          &#8226;     Tagged with
-
-              <a href="https://AlexN34.github.io/tag/docker">docker</a>,              <a href="https://AlexN34.github.io/tag/cheatsheets">cheatsheets</a>
     </p>
   </header>
+
+
   <div>
-      <p>Recently completed a Lynda course on using Docker - saved some commands for future reference.</p>
-      <br>
-      <a class="btn" href="https://AlexN34.github.io/blog/2018/docker-cheatsheet#docker-cheatsheet">    Continue reading
-</a>
+    <h2>Magical scriptable <code>docker run</code> commands</h2>
+<p>I originally picked up Docker as a last ditch attempt to install a contained Python 3.4 environmenfor a work project after the usual approaches of <code>pyenv</code> etc were just not working that day. After being impressed by the performance of containerisation I've been keen to stretch into bringing more of my environment into containers in hope of one day achieving a cross-platform setup.</p>
+<p>This weekend I made a start compiling some run configs and docker files [here][https://github.com/AlexN34/dockerfiles].</p>
+<p>I haven't found an ideal way to abstract out system dependent filepaths or test whether these yaml files work the same on both Windows/MacOS/Linux) yet, but for now I'm using predefined environment variables to store mounted volumes.</p>
+<h3>Command Lookup</h3>
+<ul>
+<li><code>docker-compose up &lt;docker-compose.yml&gt;</code> to spin up instance of container</li>
+<li><code>docker-compose down &lt;docker-compose.yml&gt;</code> for teardown</li>
+</ul>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://AlexN34.github.io/blog/2018/docker-compose#docker-compose">Docker Compose</a></h2>
+  <div class="tag-cloud">
     <p>
-          Posted on Fri 23 March 2018 in <a href="https://AlexN34.github.io/category/cheatsheets">cheatsheets</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="https://AlexN34.github.io/tag/docker">docker</a>,              <a href="https://AlexN34.github.io/tag/compose">compose</a>,              <a href="https://AlexN34.github.io/tag/cheatsheets">cheatsheets</a>
+      <a href="https://AlexN34.github.io/tag/docker">docker</a>
+      <a href="https://AlexN34.github.io/tag/compose">compose</a>
+      <a href="https://AlexN34.github.io/tag/cheatsheets">cheatsheets</a>
     </p>
-  </header>
-  <div>
-      <p>Continuing experimentation with Docker using Docker-compose</p>
-      <br>
-      <a class="btn" href="https://AlexN34.github.io/blog/2018/docker-compose#docker-compose">    Continue reading
-</a>
   </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>&copy;  </p>
