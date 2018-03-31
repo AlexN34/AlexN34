@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://AlexN34.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://AlexN34.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://AlexN34.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://AlexN34.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alex's Home page Atom">
+
+
+
+
+
+<meta name="author" content="Alex Nguyen" />
+<meta name="description" content="Tinkering with Java/Android -- one surefire way to consume an Easter weekend!" />
+<meta name="keywords" content="android, mobile, apps, ocr">
+
+<meta property="og:site_name" content="Alex's Home page"/>
+<meta property="og:title" content="Java and OCR Text Reading with Android Vision API"/>
+<meta property="og:description" content="Tinkering with Java/Android -- one surefire way to consume an Easter weekend!"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://AlexN34.github.io/blog/2018/androidvision"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-03-31 17:50:00+11:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://AlexN34.github.io/author/alex-nguyen.html">
+<meta property="article:section" content="mobile"/>
+<meta property="article:tag" content="android"/>
+<meta property="article:tag" content="mobile"/>
+<meta property="article:tag" content="apps"/>
+<meta property="article:tag" content="ocr"/>
+<meta property="og:image" content="/images/profile.jpg">
+
+  <title>Alex's Home page &ndash; Java and OCR Text Reading with Android Vision API</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://AlexN34.github.io">
+        <img src="/images/profile.jpg" alt="Alex Nguyen" title="Alex Nguyen">
+      </a>
+      <h1><a href="https://AlexN34.github.io">Alex Nguyen</a></h1>
+
+<p><pre>programming blog to document ... stuff</pre></p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://AlexN34.github.io/pages/about#about">About Me</a></li>
+          <li><a href="https://AlexN34.github.io/pages/resume#resume">Resume</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/alexn34" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/alex-nguyen-8927b966/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://AlexN34.github.io">    Home
+</a>
+
+      <a href="/archives">Archives</a>
+      <a href="/categories">Categories</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://AlexN34.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="androidvision">Java and OCR Text Reading with Android Vision API</h1>
+    <p>
+          Posted on Sat 31 March 2018 in <a href="https://AlexN34.github.io/category/mobile">mobile</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2>SpringBoot</h2>
+<p>Last weekend I spent a lot of time re-familiarising with Java - I've spent a lot of time in the Python space recently. </p>
+<p>I learned how to use <a href="https://projects.spring.io/spring-boot/">SpringBoot</a> for a take-home which required exposing an API on a Server connected to a MySQL backend and essentially writing a client to pretty print query results.</p>
+<p>The general approach was similar to <code>Flask</code> in that there are provided annotations that route REST endpoints - you just need to route requests to the right functions and bob's your uncle. The package </p>
+<p>JSON structure/type conversion was somewhat magical -- where with <code>requests</code> you parse data structures from strings/ints on raw JSON, using Springboot with <code>Jackson</code> in Java provides somewhat implicit conversion. Instead, you make a class that represents your JSON object (though I thankfully didn't need it, nesting works by having wrapper classes made too) and the library handles parsing to the input Object types you require. In my case, I needed dates called as a String to be parsed into a Date - it handled with no fuss which was convenient.</p>
+<p>Still, I find myself preferring the ability to interact with objects in Python and the ability to simply <code>pip install</code> &amp; <code>import</code> stuff instead of fiddling with <code>maven</code> XML dependencies and plugins. I would say 50% of project time was dedicated to figuring out how to make my project <code>.jar</code> files run from commandline the way they do within the <code>IntelliJ</code> IDE!
+That could be my fault for not knowing how to configure the IDE to output the right thing for me yet, but it was pretty frustrating.</p>
+<h2>Android</h2>
+<p>This Easter weekend I decided to scratch an itch that has been in my brain for some time - is there a library that provides streamed, locally processed text scanning for mobile app development? Essentially I wanted something in the vein of of a QR Code scanner library, without the need to take pictures to interact with the captured code. Also instead of a QR code, I wanted to manipulate arbitrary text (i.e. optical character recognition) I wanted it to work locally for performance reasons as well as offline functionality. </p>
+<p>Knowing nothing about computer vision, I wanted to find a library to help out with this - rough searching brought up the <a href="https://codelabs.developers.google.com/codelabs/mobile-vision-ocr/">Google Vision APIs sample</a>. I spent the better part of a day to find it seems to deliver what I was looking for (particularly the local processing part).</p>
+<p>I followed the introduction and slightly adapted the result to do further simple text parsing - at a glance it recognises printed text pretty well. I'm hoping to get the time to continue tinkering in the next couple months - I'm envisioning a conversion app I can use by hovering on the fly instead of repeatedly typing numbers into my phone's calculator. For anyone interested, the project currently lives <a href="https://github.com/AlexN34/ocrconverter">here</a>.</p>
+<h2>Docker</h2>
+<p>My docker (compose) file repo <a href="https://github.com/AlexN34/dockerfiles">here</a> has now amassed files for running JetBrains IDEs: IntelliJ IDEA, PyCharm and AndroidStudio (this counts, it's based on IntelliJ)! </p>
+<p>Each file took a lot longer than expected to set up because while they all use the same general structure for config storage, they're not <em>exactly</em> the same. I kept getting tripped up by the fact that the path looks like <code>~/{IDE Name}{version}/</code>; it changes with every resolution. I could probably make it general with symlinking something like <code>ln -s ~/.{IDE Name} {IDE Name}{version}</code>in the Dockerfile that builds the image in the first place and forever keeping a singular named repo for <code>.{IDE Name}</code>, but for now the files just code in the latest version number. </p>
+<p>One cool thing was that it's possible to get USB passthrough to the docker container (for debugging on device) simply by mounting the <code>/dev/usb</code> folder (<em>everything</em> is a file) in Linux. Won't work on Windows though as apparently usb passthrough <a href="https://forums.docker.com/t/docker-for-windows-usb-support/38693/2">isn't yet supported</a> which dampens the dream of crossplatform for now.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://AlexN34.github.io/tag/android">android</a>
+      <a href="https://AlexN34.github.io/tag/mobile">mobile</a>
+      <a href="https://AlexN34.github.io/tag/apps">apps</a>
+      <a href="https://AlexN34.github.io/tag/ocr">ocr</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Alex's Home page ",
+  "url" : "https://AlexN34.github.io",
+  "image": "/images/profile.jpg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
