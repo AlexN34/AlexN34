@@ -7,11 +7,18 @@ SITENAME = 'Alex\'s Home page'
 SITETITLE = AUTHOR
 SITESUBTITLE = '<pre>programming blog to document ... stuff</pre>'
 # relative filepaths to: https://github.com/alexandrevicenzi/Flex/tree/master && https://github.com/getpelican/pelican-plugins/
+# Theme settings
 THEME = "../blog-resources/Flex"
+THEME_COLOR = "dark"
+THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+
+PYGMENTS_STYLE = 'friendly'
+PYGMENTS_STYLE_DARK = 'monokai'
+
 PLUGIN_PATHS = ['../blog-resources/pelican-plugins/']
 PLUGINS = ['better_codeblock_line_numbering', 'bootstrapify', 'pelican_javascript', 'pdf-img']
 # Theme Settings
-SITELOGO = '/images/profile.jpg'
+SITELOGO = '/images/profile.png'
 PATH = 'content'
 
 TIMEZONE = 'Australia/Sydney'
