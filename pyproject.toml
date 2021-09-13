@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "blog"
 version = "0.1.0"
-description = "source for alexn34's blog"
+description = "source for alexnguyennn's blog"
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]

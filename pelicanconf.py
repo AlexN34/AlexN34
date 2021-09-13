@@ -30,13 +30,13 @@ MAIN_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 MENUITEMS = (('Archives', '/archives'),('Categories', '/categories'),('Tags', '/tags'),)
 
-# Blogroll
-LINKS = (# ('Selenium Presentation', '/presentation'),
-         )
+# Blogroll (add ('title', '/relative/path') tuple for left side pane links)
+LINKS = ()
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/alexn34'),
-          ('linkedin', 'https://www.linkedin.com/in/alex-nguyen-8927b966/'))
+SOCIAL = (
+    ('github', 'https://github.com/alexnguyennn'),
+    ('linkedin', 'https://www.linkedin.com/in/alex-nguyen-8927b966/'))
 
 DEFAULT_PAGINATION = 10
 

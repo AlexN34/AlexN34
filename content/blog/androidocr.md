@@ -24,10 +24,10 @@ This Easter weekend I decided to scratch an itch that has been in my brain for s
 
 Knowing nothing about computer vision, I wanted to find a library to help out with this - rough searching brought up the [Google Vision APIs sample](https://codelabs.developers.google.com/codelabs/mobile-vision-ocr/). I spent the better part of a day (the tutorial takes 30min but I spent time investigating the API) to find it seems to deliver what I was looking for (particularly the local processing part).
 
-I followed the introduction and slightly adapted the result to do further simple text parsing - at a glance it recognises printed text pretty well. I'm hoping to get the time to continue tinkering in the next couple months - I'm envisioning a conversion app I can use by hovering on the fly instead of repeatedly typing numbers into my phone's calculator. For anyone interested, the project currently lives [here](https://github.com/AlexN34/ocrconverter).
+I followed the introduction and slightly adapted the result to do further simple text parsing - at a glance it recognises printed text pretty well. I'm hoping to get the time to continue tinkering in the next couple months - I'm envisioning a conversion app I can use by hovering on the fly instead of repeatedly typing numbers into my phone's calculator. For anyone interested, the project currently lives [here](https://github.com/alexnguyennn/ocrconverter).
 
 ## Docker 
-My docker (compose) file repo [here](https://github.com/AlexN34/dockerfiles) has now amassed files for running JetBrains IDEs: IntelliJ IDEA, PyCharm and AndroidStudio (this counts, it's based on IntelliJ)! 
+My docker (compose) file repo [here](https://github.com/alexnguyennn/dockerfiles) has now amassed files for running JetBrains IDEs: IntelliJ IDEA, PyCharm and AndroidStudio (this counts, it's based on IntelliJ)! 
 
 Each file took a lot longer than expected to set up because while they all use the same general structure for config storage, they're not *exactly* the same. I kept getting tripped up by the fact that the path looks like `~/{IDE Name}{version}/`; it changes with every resolution. I could probably make it general with symlinking something like `ln -s ~/.{IDE Name} {IDE Name}{version}`in the Dockerfile that builds the image in the first place and forever keeping a singular named repo for `.{IDE Name}`, but for now the files just code in the latest version number. 
 

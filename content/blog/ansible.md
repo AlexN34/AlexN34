@@ -9,7 +9,7 @@ Summary: New DevOps tool: Ansible
 ## Background
 Moving into Digital Platforms (Cloud and DevOps kind of work) is going to require a new toolset - knowing Python, it seems like Ansible would be a good choice to pick up for infrastructure automation.
 
-Toying around with local hosts looks promising so far - links to playbooks [here](https://github.com/AlexN34/learn-ansible). Next step is orchestrating real servers - fingers crossed I'll get to explore/use some the extensibility features for work!
+Toying around with local hosts looks promising so far - links to playbooks [here](https://github.com/alexnguyennn/learn-ansible). Next step is orchestrating real servers - fingers crossed I'll get to explore/use some the extensibility features for work!
 
 ### Tidbits
 - Ansible runs with central controller node running commands on other nodes (which don't necessarily have Ansible installed)
