@@ -6,8 +6,9 @@ AUTHOR = 'Alex Nguyen'
 SITENAME = 'Alex\'s Home page'
 SITETITLE = AUTHOR
 SITESUBTITLE = '<pre>programming blog to document ... stuff</pre>'
-THEME = "../pelican-themes/Flex"
-PLUGIN_PATHS = ['../pelican-plugins/']
+# relative filepaths to: https://github.com/alexandrevicenzi/Flex/tree/master && https://github.com/getpelican/pelican-plugins/
+THEME = "../blog-resources/Flex"
+PLUGIN_PATHS = ['../blog-resources/pelican-plugins/']
 PLUGINS = ['better_codeblock_line_numbering', 'bootstrapify', 'pelican_javascript', 'pdf-img']
 # Theme Settings
 SITELOGO = '/images/profile.jpg'
@@ -31,7 +32,6 @@ MENUITEMS = (('Archives', '/archives'),('Categories', '/categories'),('Tags', '/
 
 # Blogroll
 LINKS = (# ('Selenium Presentation', '/presentation'),
-         # ('IoT Config Parser', 'https://github.com/AlexN34/iotconfigparser'),
          )
 
 # Social widget
