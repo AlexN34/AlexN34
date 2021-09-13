@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
 
 AUTHOR = 'Alex Nguyen'
 SITENAME = 'Alex Nguyen\'s Personal Blog'
@@ -12,6 +13,7 @@ THEME = "../blog-resources/Flex"
 THEME_COLOR = "dark"
 THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
 
+BROWSER_COLOR = "#333333"
 PYGMENTS_STYLE = 'friendly'
 PYGMENTS_STYLE_DARK = 'monokai'
 
@@ -24,6 +26,9 @@ PATH = 'content'
 TIMEZONE = 'Australia/Sydney'
 
 DEFAULT_LANG = 'en'
+COPYRIGHT_YEAR = datetime.now().year
+
+ROBOTS = "index, nofollow"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
