@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Alex Nguyen'
-SITENAME = 'Alex\'s Home page'
+SITENAME = 'Alex Nguyen\'s Personal Blog'
 SITETITLE = AUTHOR
-SITESUBTITLE = '<pre>programming blog to document ... stuff</pre>'
+SITESUBTITLE = '<pre> Software | DevOps | Other</pre>'
 # relative filepaths to: https://github.com/alexandrevicenzi/Flex/tree/master && https://github.com/getpelican/pelican-plugins/
 # Theme settings
 THEME = "../blog-resources/Flex"
